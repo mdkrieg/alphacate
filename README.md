@@ -2,6 +2,31 @@
 
 ---
 
+Big thanks to the originator of this project however I'm noticing some things that I'd like to tweak. As this doesn't look like it's being maintained I'm creating this fork to use in my projects.
+#### TODO
+- [ ] MFI returns object with typo (negativMoneyFlow -> negativeMoneyFlow)
+- [ ] MACD is returned in an odd format, integrate the following function to normalize
+
+```
+    function mergeMACD(data){
+        let macdResult = [];
+        for(var i in data[0].prices){ //strange but it puts the data in a 1-element array
+            macdResult.push({
+                slow_ema:   data[0].slow_ema[i],
+                fast_ema:   data[0].fast_ema[i],
+                signal_ema: data[0].signal_ema[i],
+                macd:       data[0].macd[i],
+                price:      data[0].prices[i]
+            });
+        }
+        return macdResult;
+    }
+```
+- [ ] OBV doesn't seem to work correctly, requires lazyEvaluation:true to return a series. Also, series doesn't match what I see on tradingview
+- [ ] Improve docs
+- [ ] ---Average True Range requires low, high, & close
+- [ ] 
+
 A Node.js toolkit with various indicators and oscillators for the technical stock analysis. This package contains only the mathematical calculations.
 
 ## Installation

@@ -6,7 +6,7 @@ A Node.js toolkit with various indicators and oscillators for the technical stoc
 
 Big thanks to the originator of this project however I'm noticing some things that I'd like to tweak. As this doesn't look like it's being maintained I'm creating this fork to use in my projects.
 ### TODO
-- [x] MFI return object contains typo (negativMoneyFlow -> negativeMoneyFlow)
+- [x] (0.4.1) MFI return object contains typo (negativMoneyFlow -> negativeMoneyFlow)
 - [ ] MACD is returned in a strange format, integrate the following function to normalize
 
 ```
@@ -24,13 +24,13 @@ Big thanks to the originator of this project however I'm noticing some things th
         return macdResult;
     }
 ```
-- [x] OBV doesn't seem to work correctly, requires lazyEvaluation:true to return a series.
--       ^ error with if(!i) yielding result on i = 0 in the for loop
-- [x] RSI - Fixed rounding error raised in this issue: https://github.com/codeplayr/alphacate/issues
-- [x] RSI - Fixed error with initial average including the first bar (always gain, loss = 0). Additionally I confirmed in excel that this was dropping one bar after the initial period
+- [x] (0.4.1) OBV doesn't seem to work correctly, requires lazyEvaluation:true to return a series.
+-  ^ error with if(!i) yielding result on i = 0 in the for loop
+- [x] (0.4.1) RSI - Fixed rounding error raised in this issue: https://github.com/codeplayr/alphacate/issues
+- [x] (0.4.1) RSI - Fixed error with initial average including the first bar (always gain, loss = 0). Additionally I confirmed in excel that this was dropping one bar after the initial period
 
 #### Documentation
-- [x] ATR - Average True Range requires low, high, & close
+- [x] (0.4.1) ATR - Average True Range requires low, high, & close
 
 
 ## Installation

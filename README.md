@@ -25,7 +25,7 @@ Big thanks to the originator of this project however I'm noticing some things th
     }
 ```
 - [x] (0.4.1) OBV doesn't seem to work correctly, requires lazyEvaluation:true to return a series.
--       ^ error with if(!i) yielding result on i = 0 in the for loop
+-  ^ error with if(!i) yielding result on i = 0 in the for loop
 - [x] (0.4.1) RSI - Fixed rounding error raised in this issue: https://github.com/codeplayr/alphacate/issues
 - [x] (0.4.1) RSI - Fixed error with initial average including the first bar (always gain, loss = 0). Additionally I confirmed in excel that this was dropping one bar after the initial period
 
